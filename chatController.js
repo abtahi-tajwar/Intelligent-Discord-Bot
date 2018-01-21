@@ -97,7 +97,10 @@ module.exports = function(bot){
             message.channel.send("https://xvideos.com ekhane dhuk :yum:");
         }
         else if(msg === 'SUP'){
-            message.channel.send("absdfsd");
+            message.channel.send("hey");
+        }
+        else if((msg === prefix + 'BUTTER')|| (msg === prefix + 'TAJWAR') || (msg === prefix + 'ABTAHI')){
+            message.channel.send("Will I call my boss?");
         }
         else if(msg.indexOf(prefix)>-1){
             if(msg.indexOf('FUCK')>-1 && msg.indexOf('BOT')>-1){
