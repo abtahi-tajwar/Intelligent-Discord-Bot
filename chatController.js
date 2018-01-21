@@ -78,7 +78,7 @@ module.exports = function(bot){
         }
 
         if(msg === prefix+'ID'){
-            console.log(author);
+            message.channel.send(author);
         }
 
         if(msg === prefix+'YO'){
