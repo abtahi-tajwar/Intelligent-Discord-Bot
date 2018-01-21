@@ -30,20 +30,51 @@ module.exports = function(bot){
             'Ita tempu ola',
             'Itare sudis na ita bainchod'
         ];
-        var emon = [
-            'Emon ki obostha tomar',
-            'Emon bhai ar poris na baji tui',
-            'Emon Tumi amake chinteso na miya',
-            'Emon I love you',
-            'Emon kire tumi amake patta dao na keno',
-            'Emon kitkat khawao',
-            'Emon Bhalo aso?'
-        ];
+        var emon  = {
+            emon01 : [
+                'Emon ki obostha tomar',
+                'Emon bhai ar poris na baji tui',
+                'Emon Tumi amake chinteso na miya',
+                'Emon I love you',
+                'Emon kire tumi amake patta dao na keno',
+                'Emon kitkat khawao',
+                'Emon Bhalo aso?'
+            ],
+            emonkire : [
+                'Ki emon chinteso na amake?',
+                'Kire bolar ki ase ami detos arki chino na??',
+                'Emon emon bhab kortese jeno amake chine na',
+                'Ami ke bolo to dekhi'
+            ],
+            emongail : [
+                'Emon gail ken dao bhai',
+                'Shuno emon tomar theke ami eta expect kori nai',
+                'Emon plz gail dio na',
+                'Emon ami dei gail ebar',
+                'Mukh kharap korio na emon'
+            ],
+            emonsana : [
+                'Sana marodde na bhai',
+                'Eto sana sana koro ken emon',
+                'Tomar sanar bhoinere salam'
+            ]
+        } 
         ////////////////////////////////////////////////////
 
         ////////////////////////////////Emon /////////////////////
         if(admin === '402377069797048320'){
-            message.channel.send(emon[Math.floor(Math.random()*emon.length)]);
+            if(msg.indexOf('KIRE')>-1){
+                message.channel.send(emon.emonkire[Math.floor(Math.random()*emon.emonkire.length)]);
+            }
+            else if(msg.indexOf('FUCK')>-1 || msg.indexOf('TORMARHOGA') || msg.indexOf('MADACCHOT') || msg.indexOf('MOTHERFUCKER')||msg.indexOf('BAAL')){
+                message.channel.send(emon.emongail[Math.floor(Math.random()*emon.emongail.length)]);
+            }
+            else if(msg === 'SANA'){
+                message.channel.send(emon.emonsana[Math.floor(Math.random()*emon.emonsana.length)]);
+            }
+            else {
+                message.channel.send(emon.emon01[Math.floor(Math.random()*emon.emon01.length)]);
+            }
         }
 
         if(msg === prefix+'YO'){
