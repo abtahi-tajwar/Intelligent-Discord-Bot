@@ -76,6 +76,12 @@ module.exports = function(bot){
                 message.channel.send(emon.emon01[Math.floor(Math.random()*emon.emon01.length)]);
             }
         }
+        
+        if(admin === 400549146290814998){
+            if(msg === prefix+'HEY'){
+                messege.channel.send("Yes Boss");
+            }
+        }
 
         if(msg === prefix+'ID'){
             message.channel.send(admin);
