@@ -77,7 +77,7 @@ module.exports = function(bot){
             }
         }
         
-        if(admin === 400549146290814998){
+        if(message.author === '400549146290814998'){
             if(msg === prefix+'HEY'){
                 messege.channel.send("Yes Boss");
             }
