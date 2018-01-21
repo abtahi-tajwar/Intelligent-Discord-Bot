@@ -62,7 +62,7 @@ module.exports = function(bot){
         ////////////////////////////////////////////////////
 
         ////////////////////////////////Emon /////////////////////
-        if(admin === '402377069797048320'){
+        if(admin === 402377069797048320){
             if(msg.indexOf('KIRE')>-1){
                 message.channel.send(emon.emonkire[Math.floor(Math.random()*emon.emonkire.length)]);
             }
@@ -75,6 +75,10 @@ module.exports = function(bot){
             else {
                 message.channel.send(emon.emon01[Math.floor(Math.random()*emon.emon01.length)]);
             }
+        }
+
+        if(msg === prefix+'ID'){
+            console.log(author);
         }
 
         if(msg === prefix+'YO'){
